@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pojekt.plikiFXML.InwestorzyController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabelaInwestorow" onMousePressed="#pobierzInwestora" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="imiei" prefWidth="75.0" text="Nazwisko" />
+                <TableColumn fx:id="peseli" prefWidth="75.0" text="Imię" />
+                  <TableColumn fx:id="nazwiskoi" prefWidth="75.0" text="PESEL" />
+                  <TableColumn fx:id="budzeti" prefWidth="75.0" text="Budżet" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tabelaFunduszy" prefHeight="166.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="imief" prefWidth="75.0" text="Nazwisko" />
+                <TableColumn fx:id="nazwaf" prefWidth="75.0" text="Imię" />
+                  <TableColumn fx:id="nazwiskof" prefWidth="75.0" text="Nazwa" />
+                  <TableColumn fx:id="budzetf" prefWidth="75.0" text="Budżet" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="34.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="usunI" mnemonicParsing="false" onAction="#usunInwestora" prefHeight="98.0" prefWidth="300.0" text="Usuń inwestora" />
+                  <Button fx:id="usunF" mnemonicParsing="false" onAction="#usunFundusz" prefHeight="78.0" prefWidth="300.0" text="Usuń fundusz" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pojekt.plikiFXML.GieldaPWController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="41.0" prefWidth="100.0" text="Lista giełd :" wrapText="true" />
+            <ChoiceBox fx:id="listaGield" onMouseClicked="#wybierzGielde" prefWidth="150.0" />
+            <Label prefHeight="40.0" prefWidth="100.0" text="Lista akcji" />
+            <ChoiceBox fx:id="listaAktywow" onMouseClicked="#wybierzAkcje" prefWidth="150.0" />
+            <Button fx:id="dodaj" mnemonicParsing="false" onAction="#dodajAkcje" prefHeight="58.0" prefWidth="100.0" text="Dodaj akcję" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets top="300.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="usun" mnemonicParsing="false" onAction="#usunSpolke" prefHeight="58.0" prefWidth="100.0" text="Usuń akcję" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="wykup" mnemonicParsing="false" onAction="#wykupSpolke" prefHeight="95.0" prefWidth="100.0" text="Wykup akcje przez społkę" textAlignment="CENTER" wrapText="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="dodajIndeks" mnemonicParsing="false" onAction="#dodajIndeksy" prefHeight="75.0" prefWidth="100.0" text="Dodaj indeks" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="622.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="207.0" prefWidth="1000.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="334.0" prefWidth="448.0">
+                     <columns>
+                        <TableColumn fx:id="nazwa" prefWidth="68.0" text="Nazwa" />
+                        <TableColumn fx:id="dataWyceny" prefWidth="74.0" text="Data pierwszej wyceny" />
+                        <TableColumn fx:id="kursOtwarcia" prefWidth="83.0" text="Kurs otwarcia " />
+                        <TableColumn fx:id="kursObecny" prefWidth="75.0" text="Kurs obceny" />
+                        <TableColumn fx:id="kursMax" prefWidth="68.0" text="Max kurs" />
+                        <TableColumn fx:id="kursMin" prefWidth="70.0" text="Min kurs" />
+                     </columns>
+                  </TableView>
+                  <TableView fx:id="table1" prefHeight="334.0" prefWidth="573.0">
+                    <columns>
+                      <TableColumn fx:id="liczbaAkcji" prefWidth="90.0" text="Liczba akcji" />
+                        <TableColumn fx:id="zysk" prefWidth="55.0" text="Zysk" />
+                        <TableColumn fx:id="przychod" prefWidth="74.0" text="Przychód" />
+                        <TableColumn fx:id="kapitalZakladowy" prefWidth="98.0" text="Kapitał zakładowy" />
+                        <TableColumn fx:id="kapitalWlasny" prefWidth="104.0" text="Kapitał własny" />
+                        <TableColumn fx:id="wolumen" prefWidth="76.0" text="Wolumen" />
+                        <TableColumn fx:id="obroty" prefWidth="66.0" text="Obroty" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table3" prefHeight="76.0" prefWidth="807.0">
+                     <columns>
+                        <TableColumn fx:id="kraj" prefWidth="170.0" text="Kraj" />
+                        <TableColumn fx:id="miasto" prefWidth="170.0" text="Miasto" />
+                        <TableColumn fx:id="adres" prefWidth="200.0" text="Adres siedziby" />
+                        <TableColumn fx:id="waluta" prefWidth="170.0" text="Waluta" />
+                        <TableColumn fx:id="marza" prefWidth="89.0" text="Marża" />
+                     </columns>
+                  </TableView>
+                  <VBox prefHeight="76.0" prefWidth="208.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="201.0" text="Indeksy">
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </Label>
+                        <ListView fx:id="indeks" prefHeight="52.0" prefWidth="201.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="366.0" prefWidth="1000.0">
+               <children>
+                  <LineChart fx:id="wykresWartosci">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="wykresProcentowy" prefHeight="342.0" prefWidth="629.0">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

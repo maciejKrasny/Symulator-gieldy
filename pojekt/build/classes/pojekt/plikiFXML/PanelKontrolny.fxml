@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pojekt.plikiFXML.PanelKontrolnyController">
+   <bottom>
+        <GridPane prefHeight="400.0" prefWidth="51.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#dodajInwestora" prefHeight="30.0" prefWidth="150" text="Dodaj inwestora" textAlignment="CENTER">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#dodajFundusz" prefHeight="30.0" prefWidth="150" text="Dodaj fundusz" textAlignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#dodajGielde" prefHeight="30.0" prefWidth="150" text="Dodaj giełdę" textAlignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                    </GridPane.margin>
+                </Button>
+            <Button mnemonicParsing="false" onAction="#dodajRynekSurowcow" prefHeight="30.0" prefWidth="150" text="Dodaj rynek surowców" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Separator prefWidth="200.0">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Separator>
+            <Separator prefWidth="200.0" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Separator>
+            </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+        </GridPane>
+   </bottom>
+</BorderPane>
